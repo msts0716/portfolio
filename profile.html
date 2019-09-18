@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/profile.css?9080">
 	<script src="./js/jquery-3.4.1.min.js"></script>
 	<script src="./js/main.js"></script>
+	<script src="./js/strform.js"></script>
 </head>
 
 
@@ -148,15 +149,41 @@
 			</div>
 			</ul>
 		</section>
-
-        <!-- toTop -->
-		<p class="toTop">
-			<a href="javascript:void(0);">
-				<i class="material-icons">home</i>
-			</a>
-		</p>
-
     </div>
+
+    <div class="wrapper">
+	<form action="/" method="post">
+	<p>氏名</p>
+	<p class="input1"><input class="name chk" type="text" name="name" placeholder="氏名"></p>
+	<p class="err_name"></p>
+
+	<p>メール</p>
+	<p class="input"><input class="mail chk" type="text" name="mail" placeholder="メール"></p>
+	<p class="err_mail"></p>
+	<p>電話</p>
+	<p class="input2"><input class="phone chk" type="text" name="phone" placeholder="電話"></p>
+	<p class="err_phone"></p>
+
+	<p>件名</p>
+	<p class="input"><input class="tag chk" type="text" name="tag" placeholder="件名"></p>
+	<p class="err_tag"></p>
+
+	<p>内容</p>
+	    <textarea class="contents chk" name="contents" placeholder="内容"></textarea>
+	    <p class="err_contents"></p>
+
+	<p class="input"><input type="submit" value="送信" name="submit"></p>
+
+	</form>
+	</div>
+
+
+    <!-- toTop -->
+	<p class="toTop">
+		<a href="javascript:void(0);">
+			<i class="material-icons">home</i>
+		</a>
+	</p>
 
 
     <!-- footer -->

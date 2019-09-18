@@ -1,0 +1,237 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	text-align: center;
+	font-size: 16px;
+	font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
+	font-weight: bold;
+	width: 100%;
+}
+
+/*header*/
+
+header{
+	height: 200px;
+}
+
+header,div,footer{
+	position:relative;
+}
+
+header,footer,#main{
+	width:1000px;
+	margin:0 auto;
+}
+
+h1{
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    margin: 0;
+    padding-left: 0;
+    text-align: center;
+}
+
+nav{
+	bottom: 10px;
+	right: 40px;
+}
+
+.toptag{
+	position:absolute;
+	left:40%;
+}
+
+
+a{
+	color:#777777;
+	text-decoration: none;
+	content:"";
+	list-style: none;
+}
+
+ul,li{
+	content:"";
+	/*黒丸を消すやつ*/
+	list-style: none;
+}
+
+ul{
+	display: inline;
+}
+
+li{
+	display: inline-block;
+	padding: 10px;
+}
+
+/*mainVisual*/
+
+/*service*/
+.three-co{
+	display:table-cell;
+	width: 30%;
+}
+
+section{
+    margin-bottom: 10px;
+}
+
+#blog{
+	margin-bottom: 100px;
+}
+
+
+/*works*/
+#works li{
+	width: 30%;
+}
+
+
+/*blog*/
+
+section #bl{
+   display:table-cell;
+   width: 30%;
+}
+
+.tx{
+	text-align: left;
+}
+
+.more-div{
+	width: 100%;
+}
+
+.more{
+	background-color:#d3d3d3;
+	padding:5px;
+	color:#ffa500;
+	border:#fafad2;
+	border-radius:5px;   
+	position:relative;
+	left: 100px;
+	bottom: 10px;
+}
+.more:hover{color: #006400;}
+.more:active{color: #0000ff;}
+
+
+/* img */
+
+img{
+	width: 250px;
+	height: 250px;
+}
+
+img.ph{
+	width: 1000px;
+	height: 500px;
+}
+
+img.ic{
+	width: 100px;
+	height: 100px;
+}
+
+/* footer */
+.footer{
+	text-align:left;
+	margin-left:30px;
+}
+
+#copyright{
+	text-align: right;
+}
+
+
+/*アニメーションクラス*/
+
+
+/*keyframe*/
+
+
+/*--------------------------------------------------------*/
+
+
+@media screen and (max-width: 800px){
+	/*css 800px 以下のとき*/
+
+	header,footer,#main,img.ph,.three-co{
+		width: 100%;
+		/*px指定しているものの横幅を画面横サイズに合わせる*/
+	}
+
+
+	nav,ul,li,section,div,.three-co{
+		display: block;
+		/*displayをデフォルト状態に戻す*/
+	}
+
+
+
+	/*header*/
+
+	#logo{
+		width:100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		position: relative;
+		/*absoluteをセンタリングする*/
+	}
+
+
+	.toptag{
+		width:100%;
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.toptag ul{
+		width:100%;
+	}
+
+	.toptag ul li,.footer ul li{
+		width:48%;
+		float: left;
+		padding:10px 0;
+		font-size: 20px;
+		border:solid #f5f5f5;
+	}
+
+
+	/*mainVisual*/
+
+    /*service*/
+
+    p.text01,p.tx{
+    	padding: 20px;
+    	text-align: left;
+    }
+
+    /*works*/
+
+    #works li{
+    	width: 100%;
+    	padding: 0;
+    	margin-top: 10px;
+    }
+
+	/*blog*/
+
+	/* img */
+
+	/* footer */
+	nav.footer{
+		margin: 0;
+		text-align: center;
+	}
+
+
+}
