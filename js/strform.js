@@ -1,4 +1,4 @@
-$(function(){
+$(function(){ 
 	$('.chk').on('blur',function(){
 		var name = $(this).attr('name');
 				//直線にクリックした「これ」という形で指定が可能
