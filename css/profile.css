@@ -87,6 +87,10 @@ section{
     margin-bottom: 10px;
 }
 
+.text01{
+	text-align: left;
+}
+
 .text01,.tx{
 	color: #777777;
 }
