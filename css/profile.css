@@ -71,6 +71,12 @@ li{
 /*mainVisual*/
 
 /*service*/
+.ttl{
+	margin: 0 0 10px;
+    font-size: 40px;
+    text-align: center;
+}
+
 .three-co{
 	display:table-cell;
 	width: 30%;
@@ -118,6 +124,53 @@ section #bl{
 }
 .more:hover{color: #006400;}
 .more:active{color: #0000ff;}
+
+
+/*contact*/
+
+input[type="text"],
+input[type="email"],
+input[type="telephone"],
+textarea,
+input[type="submit"]{
+	padding: 10px;
+    font-size: 16px;
+    border: solid 1px #cccccc;
+    width: 300px;
+}
+
+textarea{
+	max-width:300px;
+	min-width:300px;
+	min-height:100px; 
+}
+
+p[class^="err"]{
+	color:#ff4500;
+	margin: 0 0 20px;
+}
+
+form p{
+	font-size: 20px;
+}
+/*form p:formの中のp全て*/
+/*form>p:form階下のp全て*/
+
+input[type="submit"]{
+	border-radius: 5px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	
+}
+
+input[type="submit"]:hover{
+	background-color:#87ceeb;
+	cursor: pointer;
+}
+
+
+
+
 
 
 /* img */
