@@ -1,0 +1,41 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	text-align: center;
+	font-size: 16px;
+	font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
+	font-weight: bold;
+	width: 100%;
+}
+
+.WhiteSheet{
+	border: 1px solid #000000;
+	border-radius: 2px;
+	font-size: 16px;
+	height: 40px;
+	text-align: right;
+}
+
+.Calculater{
+	padding: 10px;
+    width: 40px;
+    height: 40px;
+    margin:4px;
+    border-radius: 50%;
+}
+
+.BgOrange{
+    background-color:#f26522;
+}
+
+.BgGray{
+	background-color:#a9a9a9;
+}
+
+.Zero{
+	border-radius: 20px;
+	width: 88px;
+}

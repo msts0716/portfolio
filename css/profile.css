@@ -6,7 +6,8 @@
 body{
 	text-align: center;
 	font-size: 16px;
-	font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
+	color: #555555;
+	font-family: "Sawarabi Mincho", 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
 	font-weight: bold;
 	width: 100%;
 }
@@ -70,7 +71,7 @@ li{
 
 /*mainVisual*/
 
-/*service*/
+/*skill*/
 .ttl{
 	margin: 0 0 10px;
     font-size: 40px;
@@ -86,8 +87,13 @@ section{
     margin-bottom: 10px;
 }
 
-#blog{
-	margin-bottom: 100px;
+.text01,.tx{
+	color: #777777;
+}
+
+.icon .material-icons{
+	font-size: 150px;
+	padding: 20px 0;
 }
 
 
@@ -96,8 +102,15 @@ section{
 	width: 30%;
 }
 
+ul.worksList > li > a > img{
+	height: auto;
+}
+
 
 /*blog*/
+#blog{
+	margin-bottom: 100px;
+}
 
 section #bl{
    display:table-cell;
@@ -261,12 +274,14 @@ img.ic{
 
 	/*mainVisual*/
 
-    /*service*/
+    /*skill*/
 
     p.text01,p.tx{
     	padding: 20px;
     	text-align: left;
     }
+
+
 
     /*works*/
 

@@ -1,6 +1,6 @@
 $(function(){
 /*DOM(htmlの後に読み込んでくださいという)コード*/
-	$('.toTop').on('click',function(){
+	$('.toTop a').on('click',function(){
 			$('html,body').animate({
 				scrollTop:0
 			},600);/*1000msで1秒、0.6sでも可*/
