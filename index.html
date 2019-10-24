@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--toptagをGoogle検索化する-->
+<!--Contactの飛ぶ場所を修正-->
 <!--スクロールアニメーションを追加(kagentのhpみたいなやつ)　on(scroll:function),addclass,removClassなどを使う、詳しくはhpをパクる
 　jsは64~86行目,css:keyframes(あらかじめ動きを設定できる)511~　anime導入部416~455　アニメーション秒数は0.5秒くらいで-->
 <html>
@@ -57,6 +57,28 @@
 			<div class="pc"><img class="ph" src="./img/sample.jpg" alt=""></div>
 	    </div>
 
+	    <section>
+	    	<h2>Profile</h2>
+	    	<!--履歴書を作る-->
+	    	<div>
+	    		<h3>基本情報</h3>
+	    		<p>由井雅俊(♂27)</p>
+	    		<p>東京都出身、品川住み</p>
+	    	</div>
+	    	<div>
+	    		<h3>経歴</h3>
+	    		<p>成城大学経済学部経営学科　卒業(2015.03)</p>
+	    		<p>JKホールディングス株式会社　　入社(2015.04)</p>
+	    	</div>
+	    	<div>
+	    		<h3>資格</h3>
+	    		<p>日商簿記3級</p>
+	    		<p>ビジネス実務法務検定3級</p>
+	    		<p>TOEIC650点</p>
+	    		<p>普通自動車免許</p>
+	    	</div>
+	    </section>
+
 	    <!-- service -->
 		<section id="service" class="cf">
 			<h2 class="ttl">Skill</h2>
@@ -68,12 +90,12 @@ vue:SPA(single page action)youtubeの流しながらトップページに戻れ�
 				<p class="icon"><i class="material-icons">desktop_windows</i></p>
 				<p class="text01">デザインの意図を理解し、動きや効果を適切に使用することでWebサイトの仕上がりは大きく変わります。スマートフォンサイト、ワードプレスを使用した更新性の高いサイト、Javascriptを使用した動きのあるサイトなど、様々なサイトのコーディングを行っております。</p>
 			</section>
-			
+
 			<section class="three-co">
 				<h3 class="ttl2">会計</h3>
 				<p class="ttl2">ACCOUNTING</p>
 				<p class="icon"><i class="material-icons">attach_money</i></p>
-				<p class="text01">簿記3級<!--〇会計　簿記3級　特にどんな知識に詳しいか--></p>
+				<p class="text01">Office製品全般(Excel,Word,Powerpoint)を利用可能。Excelは基本的な関数(VLOOKUP,IFなど)を用いてピボットテーブル・グラフなどの資料作成。保有資格：簿記3級。</p>
 			</section>
 			
 			<section class="three-co">
@@ -105,27 +127,27 @@ vue:SPA(single page action)youtubeの流しながらトップページに戻れ�
 		<!-- Profile -->
 		<section id="blog" class="cf">
 			<!--idは#、classは.で-->
-			<h2 class="ttl">Profile</h2>
-<!-- 経歴関係(生年月日,実名,履歴書項目(資格・免許など)を書く)-->
+			<h2 class="ttl">Blog</h2>
+			<!--wordpressで作成-->
 			<ul class="blogList">
 			<div>
 				<section class="three-co">
 				    <li><img src="./img/sample.jpg"></li>
-				    <p class="text01">2019年、元旦。自宅から近いということもあり、大阪城公園へ初日の出を拝みにいきました。日の出時刻は7:04、少し早起きすれば大丈夫。</p>
+				    <p class="text01">ラーメンブログ（六厘舎）</p>
 				    <div class="more_div">
 				    	<a class="more">more</a>
 				    </div>
 				</section>
 				<section class="three-co">
 				    <li><img src="./img/sample.jpg"></li>
-				    <p class="tx">友人夫婦に女の子が生まれたので、会いに行ってきました。お母さんのお腹が少しずつ大きくなっていく過程も見ていたので、元気な赤ちゃんで嬉しくなりました。</p>
+				    <p class="tx">ドライブログ（近場ドライブ）</p>
 				    <div class="more_div">
 				    	<a class="more">more</a>
 				    </div>
 				</section>
 				<section class="three-co">
 				    <li><img src="./img/sample.jpg"></li>
-				    <p class="tx">急に思い立ってじーちゃんとばーちゃんの写真を撮りたくなり、重たい中判カメラを抱えて実家に行ってきました。</p>
+				    <p class="tx">旅行ブログ（インスタ映えの場所）</p>
 				    <div class="more_div">
 				    	<a class="more">more</a>
 				    </div>
@@ -134,21 +156,21 @@ vue:SPA(single page action)youtubeの流しながらトップページに戻れ�
             <div>
                 <section class="three-co">
 				    <li><img src="./img/sample.jpg"></li>
-				    <p class="tx">友人のお子さんの七五三参りを撮影させてもらいました。友人宅に着いたとき、着付けも終わってハリーポッターの映画に夢中だったユリカちゃん。</p>
+				    <p class="tx">バー開拓ブログ（交友関係も盛り込む）</p>
 				    <div class="more_div">
 				    	<a class="more">more</a>
 				    </div>
 				</section>
 				<section class="three-co">
 				    <li><img src="./img/sample.jpg"></li>
-				    <p class="tx">平野にあるパン屋、トロワさんの仕事場を撮らせていただきました。当日お店に到着したのが朝の4時、すでにいくつかのパンが出来上がっていました。</p>
+				    <p class="tx">お笑いブログ（ラスタ池袋）</p>
 				    <div class="more_div">
 				    	<a class="more">more</a>
 				    </div>
 				</section>
 				<section class="three-co">
 				    <li><img src="./img/sample.jpg"></li>
-				    <p class="tx">大阪でストリートスナップを撮っているyujiさん主催の「写ルンですフォトフォーク」へ参加してきました。</p>
+				    <p class="tx">料理ブログ（鶏のトマト＆チーズ煮込み）</p>
 				    <div class="more_div">
 				    	<a class="more">more</a>
 				    </div>
