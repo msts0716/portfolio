@@ -122,9 +122,6 @@ $(function(){
 		$('.dspData').val(dData);
 		$('.Clear').val('C');
 	});
-
-
-
 });
 
 

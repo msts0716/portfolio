@@ -1,0 +1,36 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	text-align: center;
+	font-size: 16px;
+	color: #555555;
+	font-family: "Sawarabi Mincho", 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
+	font-weight: bold;
+	width: 100%;
+}
+
+/*timer*/
+
+h1{
+	font-size: 50px;
+}
+
+p{
+	text-align: center;
+	font-size: 200px;
+	color: #555555;
+}
+
+input{
+	font-size: 30px;
+	padding: 50px;
+	margin: 50px 100px;
+	border-radius: 100px;
+}
+
+input:hover{background: #7fffd4;}
+input:active{color: #32cd32;}
+
