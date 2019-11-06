@@ -34,3 +34,7 @@ input{
 input:hover{background: #7fffd4;}
 input:active{color: #32cd32;}
 
+.RapList>p{
+	font-size: 30px;
+}
+
