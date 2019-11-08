@@ -152,6 +152,45 @@ section #bl{
 .more:hover{color: #006400;}
 .more:active{color: #0000ff;}
 
+section.three-co>li{
+	width: 250px;
+	height: 175px;
+	position: relative;
+	margin-bottom: 30px;
+	overflow: hidden; 
+	padding: 0;
+}
+
+section.three-co>li>img{
+  max-width: 250px;
+  max-height: 175px;
+  -ms-interpolation-mode: bicubic;
+}
+
+section.three-co>li:hover>h3{
+	width: 250px;
+	height: 115px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.5);
+	opacity: 1;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	padding: 30px;
+	padding-left: 85px;
+	transition: opacity 0.5s ease;
+}
+
+section.three-co>li>h3{
+	opacity: 0;
+}
+
+/*画像のリサイズ、文字位置の訂正、画像と■を合わせる
 
 /*contact*/
 
