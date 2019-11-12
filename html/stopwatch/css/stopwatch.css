@@ -38,3 +38,35 @@ input:active{color: #32cd32;}
 	font-size: 30px;
 }
 
+
+/*--------------------------------------------------------*/
+
+
+@media screen and (max-width: 800px){
+	/*css 800px 以下のとき*/
+
+	h1{
+		width:100%;
+		font-size:200%;
+	}
+
+	p{
+		font-size:500%;
+	}
+
+	section>div{
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		margin: 0;
+	}
+
+	input{
+		width: 100px;
+		height: 100px;
+		padding: 0;
+		margin: 0;
+		font-size: 20px;
+	}
+}
+
