@@ -68,5 +68,10 @@ input:active{color: #32cd32;}
 		margin: 0;
 		font-size: 20px;
 	}
+
+	.RapList{
+		flex-direction: column;
+  	}
+
 }
 

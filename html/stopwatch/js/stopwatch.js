@@ -6,6 +6,7 @@ $(function(){
 	var Seccond = 0;
 	var Minute = 0;
 	var timerID;
+	var RapCount = 0;
 	//$('.DespStart').text(count);
 
 	var countup = function(){
@@ -97,9 +98,12 @@ $(function(){
 	$('.Rap').on('click',function(){
 		var Mode = $(this).val();
 		if(Mode == 'ラップ'){
+			if (RapCount > 3) return;
 			$('.RapList').append('<p>'+Minute+':'+Seccond+'.'+DotCount+'</p>');
+			RapCount++;
 		}else{
 			$('.RapList').text('');
+			RapCount = 0;
 			count = 0;
 			DotCount = 0;
 			Seccond = 0;
@@ -108,6 +112,7 @@ $(function(){
 			$('.Seccond').text('00');
 			$('.Minute').text('00');
 		}
+		
 		
 	});
 
