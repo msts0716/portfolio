@@ -2,7 +2,6 @@
 	margin:0;
 	padding:0;
 }
-
 body{
 	text-align: center;
 	font-size: 16px;
@@ -11,56 +10,42 @@ body{
 	font-weight: bold;
 	width: 100%;
 }
-
 /*timer*/
-
 h1{
 	font-size: 50px;
 }
-
 p{
 	text-align: center;
 	font-size: 200px;
 	color: #555555;
 }
-
 input{
 	font-size: 30px;
 	padding: 50px;
 	margin: 50px 100px;
 	border-radius: 100px;
 }
-
 input:hover{background: #7fffd4;}
 input:active{color: #32cd32;}
-
 .RapList>p{
 	font-size: 30px;
 }
-
-
 /*--------------------------------------------------------*/
-
-
 @media screen and (max-width: 800px){
 	/*css 800px 以下のとき*/
-
 	h1{
 		width:100%;
 		font-size:200%;
 	}
-
 	p{
 		font-size:500%;
 	}
-
 	section>div{
 		width: 100%;
 		display: flex;
 		justify-content: space-around;
 		margin: 0;
 	}
-
 	input{
 		width: 100px;
 		height: 100px;
@@ -68,10 +53,8 @@ input:active{color: #32cd32;}
 		margin: 0;
 		font-size: 20px;
 	}
-
 	.RapList{
 		flex-direction: column;
   	}
-
 }
 
