@@ -1,37 +1,15 @@
 $(function(){
 /*DOM(htmlの後に読み込んでくださいという)コード*/
-	$('.toTop a').on('click',function(){
-			$('html,body').animate({
-				scrollTop:0
-			},600);/*1000msで1秒、0.6sでも可*/
-			return false;
-	});
-
-/*DOM(htmlの後に読み込んでくださいという)コード*/
-	$('.about').on('click',function(){
-			$('html,body').animate({
-				scrollTop:740
-			},600);/*1000msで1秒、0.6sでも可*/
-			return false;
-	});
-
-/*DOM(htmlの後に読み込んでくださいという)コード*/
-	$('.works').on('click',function(){
-			$('html,body').animate({
-				scrollTop:1120
-			},600);/*1000msで1秒、0.6sでも可*/
-			return false;
-	});
-
-/*DOM(htmlの後に読み込んでくださいという)コード*/
-	$('.blog').on('click',function(){
-			$('html,body').animate({
-				scrollTop:2040
-			},600);/*1000msで1秒、0.6sでも可*/
-			return false;
-	});
-
-
+	
+	$('a[href^="#"]').on('click',function(){
+	    var speed = 500;
+	    var href= $(this).attr("href");
+	    var target = $(href == "#" || href == "" ? 'html' : href);
+	    //||：もしくは　  ?：→if(){}else{}
+	    var position = target.offset().top;
+	    $("html, body").animate({scrollTop:position}, speed, "swing");
+	    return false;
+  	});
 
 
 	var outContent = [];	//本文

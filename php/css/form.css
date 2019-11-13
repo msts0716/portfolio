@@ -1,0 +1,205 @@
+/* FORM SYTLE SHEET */
+/* FONT CSS 読込 */
+@import url("./font.css");
+
+/* FOR ALL */
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family:"NotoSansSC", "メイリオ", Meiryo, Osaka, sans-serif;
+	color: #777777;
+}
+a{
+	width: 250px;
+	height: 30px;
+	text-decoration: none;
+	border: 1px solid #777777;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 0 auto;
+	background-color: #999999;
+	color: #ffffff;
+}
+::placeholder{
+	color:#aaaaaa;
+}
+/* SET FORM STYLE */
+.form{
+	width: 800px;
+	margin: 0 auto;
+}
+form div{
+	text-align: left;
+}
+form .req{
+	color: #aaaaaa;
+	font-size: 12px;
+}
+input[type="text"], input[type="tel"], input[type="mail"],textarea{
+	display: block;
+	border: solid 1px #999999;
+	border-radius: 8px;
+	padding: 5px;
+	margin: 0 auto;
+	font-size: 16px;
+	width: 95%;
+	color: #333333;
+}
+input[type="text"]:focus, input[type="tel"]:focus, input[type="mail"]:focus,textarea:focus{
+	border: solid 1px #f44336;
+	border-radius: 8px;
+	outline: none; /* Chrome の枠線を除去*/
+	width: 95%;
+}
+textarea{
+	width: 95%;
+	min-width: 95%;
+	min-height: 200px;
+	max-width: 700px;
+	max-height: 800px;
+}
+.submit_btn{
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+input[type="submit"] {
+	display: none;
+}
+input[type="submit"] + label {
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+    color: #ffffff;
+    width: 300px;
+    margin: 5px auto;
+	height: 45px;
+    background-color: #ff8634;
+    border: 2px solid #ffd92a;
+    border-radius: 10px;
+    outline: none;
+}
+input[type="submit"]:disabled + label {
+	display: block;
+    color: #777;
+    background-color: #9b9b9b8a;
+    border: 2px solid #777;
+    border-radius: 10px;
+    cursor:not-allowed;
+}
+input[type="submit"]#back + label{
+	background-color: #9a9a9a;
+	border-color: #595959;
+}
+/* ERROR時 設定*/
+input[type="text"].error, input[type="tel"].error, input[type="mail"].error,textarea.error{
+	border: solid 2px #f44336;
+	border-radius: 8px;
+	outline: none; /* Chrome の枠線を除去*/
+}
+form .err_msg{
+	color: rgb(240,10,10);
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/* 確認画面 */
+p{
+	text-align: center;
+	margin: 0 auto;
+}
+.confirm{
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+.table{
+	display: table;
+	width: 800px;
+	margin: 0 auto;
+	border-bottom: 1px solid #777777;
+	padding: 10px;
+}
+.table:first-child{
+	border-top: 1px solid #777777;
+}
+.table div{
+	display: table-cell;
+	text-align: left;
+	padding: 5px 10px;
+}
+.titleCell{
+	width: 200px;
+	border-right: 1px dotted #777777;
+}
+.paramCell{
+	width: 500px;
+}
+.btn_table{
+	display: table;
+	margin-top: 20px;
+	width: 800px;
+}
+.btn_table form{
+	width: 40%;
+	display: table-cell;
+}
+.errorPage{
+	display: table;
+	width: 95%;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.errorPage a{
+	display: table-cell;
+	width: 50%;
+	text-align: center;
+	margin: 0 5px;
+}
+.errorPage a.topPage{
+	background-color: #ff8634;
+    border: 2px solid #ffd92a;
+}
+.errmsg{
+	color: #e45252;
+}
+.heading{
+	font-weight: bold;
+	text-align: center;
+	margin: 10px auto;
+}
+/* FOR Smart Phone Sizes (Under width 800px) */
+@media only screen and (max-width: 799px) {
+	.form{
+		width: 100%;
+	}
+	form{
+		width: 100%;
+	}
+	.confirm{
+		width: 100%;
+	}
+	.table{
+		width: 95%;
+		padding: 10px;
+	}
+	.titleCell{
+		width: 30%;
+	}
+	.paramCell{
+		width: 65%;
+	}
+	.btn_table{
+		width: 95%;
+	}
+	.btn_table form input[type="submit"] + label {
+		width: 75%;
+	}
+	form div{
+	    margin-top: 10px;
+	}
+}
