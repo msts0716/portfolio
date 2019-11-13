@@ -1,145 +1,87 @@
 *{
 	margin:0;
 	padding:0;
-}
-
-body{
+}body{
 	text-align: center;
 	font-size: 16px;
 	color: #555555;
 	font-family: "Sawarabi Mincho", 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
 	font-weight: bold;
 	width: 100%;
-}
-
-/*header*/
-
+}/*header*/
 header{
 	height: 200px;
-}
-
-header,div,footer{
+}header,div,footer{
 	position:relative;
-}
-
-header,footer,#main{
+}header,footer,#main{
 	width:1000px;
 	margin:0 auto;
-}
-
-h1{
+}h1{
     position: absolute;
     top: 70px;
     left: 50px;
     margin: 0;
     padding-left: 0;
     text-align: center;
-}
-
-nav{
+}nav{
 	bottom: 10px;
 	right: 40px;
-}
-
-.toptag{
+}.toptag{
 	position:absolute;
 	right:0;
-}
-
-nav > ul > a{
+}nav > ul > a{
 	padding: 5px 30px;
-}
-	
-
-nav > ul > a:hover{
+}nav > ul > a:hover{
 	color: #0000ff;
 	border: 1px solid #0000ff;
-}
-
-
-a{
+}a{
 	color:#777777;
 	text-decoration: none;
 	content:"";
 	list-style: none;
-}
-
-ul,li{
+}ul,li{
 	content:"";
 	/*黒丸を消すやつ*/
 	list-style: none;
-}
-
-ul{
+}ul{
 	display: inline;
-}
-
-li{
+}li{
 	display: inline-block;
 	padding: 10px;
-}
-
-/*mainVisual*/
-
+}/*mainVisual*/
 /*skill*/
 .ttl{
 	margin: 0 0 10px;
     font-size: 40px;
     text-align: center;
-}
-
-.three-co{
+}.three-co{
 	display:table-cell;
 	width: 30%;
-}
-
-section{
+}section{
     margin-bottom: 10px;
-}
-
-.text01{
+}.text01{
 	text-align: left;
-}
-
-.text01,.tx{
+}.text01,.tx{
 	color: #777777;
-}
-
-.icon .material-icons{
+}.icon .material-icons{
 	font-size: 150px;
 	padding: 20px 0;
-}
-
-
-/*works*/
+}/*works*/
 #works li{
 	width: 30%;
-}
-
-ul.worksList > li > a > img{
+}ul.worksList > li > a > img{
 	height: auto;
-}
-
-
-/*blog*/
+}/*blog*/
 #blog{
 	margin-bottom: 100px;
-}
-
-section #bl{
+}section #bl{
    display:table-cell;
    width: 30%;
-}
-
-.tx{
+}.tx{
 	text-align: left;
-}
-
-.more-div{
+}.more-div{
 	width: 100%;
-}
-
-.more{
+}.more{
 	background-color:#d3d3d3;
 	padding:5px;
 	color:#ffa500;
@@ -148,26 +90,18 @@ section #bl{
 	position:relative;
 	left: 100px;
 	bottom: 10px;
-}
-.more:hover{color: #006400;}
-.more:active{color: #0000ff;}
-
-section.three-co>li{
+}.more:hover{color: #006400;}.more:active{color: #0000ff;}section.three-co>li{
 	width: 250px;
 	height: 175px;
 	position: relative;
 	margin-bottom: 30px;
 	overflow: hidden; 
 	padding: 0;
-}
-
-section.three-co>li>img{
+}section.three-co>li>img{
   max-width: 250px;
   max-height: 175px;
   -ms-interpolation-mode: bicubic;
-}
-
-section.three-co>li:hover>h3{
+}section.three-co>li:hover>h3{
 	width: 250px;
 	height: 115px;
 	position: absolute;
@@ -184,16 +118,10 @@ section.three-co>li:hover>h3{
 	padding: 30px;
 	padding-left: 85px;
 	transition: opacity 0.5s ease;
-}
-
-section.three-co>li>h3{
+}section.three-co>li>h3{
 	opacity: 0;
-}
-
-/*画像のリサイズ、文字位置の訂正、画像と■を合わせる
-
+}/*画像のリサイズ、文字位置の訂正、画像と■を合わせる
 /*contact*/
-
 input[type="text"],
 input[type="email"],
 input[type="telephone"],
@@ -204,106 +132,68 @@ input[type="submit"]{
     border: solid 1px #cccccc;
     width: 300px;
 }
-
 textarea{
 	max-width:300px;
 	min-width:300px;
 	min-height:100px; 
 }
-
 p[class^="err"]{
 	color:#ff4500;
 	margin: 0 0 20px;
 }
-
 form p{
 	font-size: 20px;
-}
-/*form p:formの中のp全て*/
+}/*form p:formの中のp全て*/
 /*form>p:form階下のp全て*/
 
 input[type="submit"]{
 	border-radius: 5px;
 	margin-bottom: 20px;
 	font-size: 20px;
-	
 }
-
 input[type="submit"]:hover{
 	background-color:#87ceeb;
 	cursor: pointer;
 }
-
-
-
-
-
-
-/* img */
-
 img{
 	width: 250px;
 	height: 250px;
 }
-
 img.ph{
 	width: 1000px;
 	height: 500px;
 }
-
 img.ic{
 	width: 100px;
 	height: 100px;
 }
-
 /* footer */
 .footer{
 	text-align:left;
 	margin-left:30px;
 }
-
 #copyright{
 	text-align: right;
 }
-
-
 /*アニメーションクラス*/
-
-
 /*keyframe*/
-
-
 /*--------------------------------------------------------*/
-
-
+/*css 800px 以下のとき*/
 @media screen and (max-width: 800px){
-	/*css 800px 以下のとき*/
-
 	header,footer,#main,img.ph,.three-co{
 		width: 100%;
-		/*px指定しているものの横幅を画面横サイズに合わせる*/
 	}
-
-
 	nav,ul,li,section,div,.three-co{
 		display: block;
-		/*displayをデフォルト状態に戻す*/
 	}
-
-
-
 	/*header*/
-
 	#logo{
 		width:100%;
 		top: 0;
 		left: 0;
 		right: 0;
 		position: relative;
-		/*absoluteをセンタリングする*/
 	}
-
-
 	.toptag{
 		width:100%;
 		position: relative;
@@ -311,11 +201,9 @@ img.ic{
 		left: 0;
 		right: 0;
 	}
-
 	.toptag ul{
 		width:100%;
 	}
-
 	.toptag ul li,.footer ul li{
 		width:48%;
 		float: left;
@@ -323,36 +211,22 @@ img.ic{
 		font-size: 20px;
 		border:solid #f5f5f5;
 	}
-
-
-	/*mainVisual*/
-
     /*skill*/
-
     p.text01,p.tx{
     	padding: 20px;
     	text-align: left;
     }
-
-
-
     /*works*/
-
     #works li{
     	width: 100%;
     	padding: 0;
     	margin-top: 10px;
     }
-
 	/*blog*/
-
 	/* img */
-
 	/* footer */
 	nav.footer{
 		margin: 0;
 		text-align: center;
 	}
-
-
 }
