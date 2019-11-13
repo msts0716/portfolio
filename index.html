@@ -1,35 +1,26 @@
 <!DOCTYPE html>
-<!--Contactの飛ぶ場所を修正-->
-<!--スクロールアニメーションを追加(kagentのhpみたいなやつ)　on(scroll:function),addclass,removClassなどを使う、詳しくはhpをパクる
-　jsは64~86行目,css:keyframes(あらかじめ動きを設定できる)511~　anime導入部416~455　アニメーション秒数は0.5秒くらいで-->
-<html>
+<html lang="ja">
 <head>
-	<meta charset="utf-8">
-　　<!--ひらがな等を読み込めるようにする-->
+	<meta charset="utf-8">　
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<!--スマホ対応にする、レスポンシブルと言う-->
-	<title></title>
+	<meta name="keywords" content="ポートフォリオ">
+	<mata name="description" content="由井雅俊">
+	<meta name="robots" content="noindex">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<title>由井雅俊ポートフォリオ</title>
 	<link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--googleが作ったアイコン用cssを呼び出せる-->
 	<link rel="stylesheet" type="text/css" href="./css/profile.css?9080">
 	<script src="./js/jquery-3.4.1.min.js"></script>
 	<script src="./js/main.js"></script>
 	<script src="./js/strform.js"></script>
 </head>
-
-
-
-
-
 <body>
-
-
 	<header>
 		<h1 id="logo">
 		    <a href="#top">Profile</a>
 		</h1>
-
 		<nav class="toptag">
 			<ul class="cf">
 				<a href="#Profile">
@@ -50,19 +41,14 @@
 			</ul>
 		</nav>
 	</header>
-
-
     <!-- main -->
 	<div id="main">
-
 		<!-- mainVisual -->
 		<div id="mainVisual">
 			<div class="pc"><img class="ph" src="./img/sample.jpg" alt=""></div>
 	    </div>
-
 	    <section id="Profile">
 	    	<h2>Profile</h2>
-	    	<!--履歴書を作る-->
 	    	<div>
 	    		<h3>基本情報</h3>
 	    		<p>由井雅俊(♂27)</p>
@@ -81,34 +67,28 @@
 	    		<p>普通自動車免許</p>
 	    	</div>
 	    </section>
-
 	    <!-- service -->
 		<section id="Skill" class="cf">
 			<h2 class="ttl">Skill</h2>
-<!--〇会計　簿記3級　特にどんな知識に詳しいか　〇開発　php,js(JQuery,vue)FW
-vue:SPA(single page action)youtubeの流しながらトップページに戻れるやつ-->
 			<section class="three-co">
 				<h3 class="ttl2">コーディング</h3>
 				<p class="ttl2">CORDING</p>
 				<p class="icon"><i class="material-icons">desktop_windows</i></p>
 				<p class="text01">デザインの意図を理解し、動きや効果を適切に使用することでWebサイトの仕上がりは大きく変わります。スマートフォンサイト、ワードプレスを使用した更新性の高いサイト、Javascriptを使用した動きのあるサイトなど、様々なサイトのコーディングを行っております。</p>
 			</section>
-
 			<section class="three-co">
 				<h3 class="ttl2">会計</h3>
 				<p class="ttl2">ACCOUNTING</p>
 				<p class="icon"><i class="material-icons">attach_money</i></p>
 				<p class="text01">Office製品全般(Excel,Word,Powerpoint)を利用可能。Excelは基本的な関数(VLOOKUP,IFなど)を用いてピボットテーブル・グラフなどの資料作成。保有資格：簿記3級。</p>
 			</section>
-			
 			<section class="three-co">
 				<h3 class="ttl2">開発</h3>
 				<p class="ttl2">DEVELOPMENT</p>
 				<p class="icon"><i class="material-icons">build</i></p>
-				<p class="text01"><!--〇開発　php,js(JQuery,vue)FW vue:SPA(single page action)youtubeの流しながらトップページに戻れるやつ--></p>
+				<p class="text01"></p>
 			</section>
 		</section>
-        
         <!-- works -->
 		<section id="Works" class="cf">
 			<h2 class="ttl">Works</h2>
@@ -116,65 +96,48 @@ vue:SPA(single page action)youtubeの流しながらトップページに戻れ�
 				<li><a href="./html/calculator/"><img src="./img/calculator.png"></a></li>
 				<li><a href="./html/stopwatch"><img src="./img/stopwatch.png"></a></li>
 				<li><a href=""><img src="./img/sample.jpg"></a></li>
-
 				<li><a href=""><img src="./img/sample.jpg"></a></li>
 				<li><a href=""><img src="./img/sample.jpg"></a></li>
 				<li><a href=""><img src="./img/sample.jpg"></a></li>
-
 				<li><a href=""><img src="./img/sample.jpg"></a></li>
 				<li><a href=""><img src="./img/sample.jpg"></a></li>
 				<li><a href=""><img src="./img/sample.jpg"></a></li>
 		　　</ul>
 		</section>
-
 		<!-- Blog -->
 		<section id="Blog" class="cf">
-			<!--idは#、classは.で-->
 			<h2 class="ttl">Blog</h2>
-			<!--wordpressで作成-->
 			<ul class="blogList">
-			
 			</ul>
 		</section>
     </div>
-
-<!--問い合わせフォームのデザイン修正-->
     <div id="Contact" class="wrapper">
     	<h2 class="ttl">Contact</h2>
 		<form action="/" method="post">
 			<p>氏名</p>
 			<p class="input"><input class="name chk" type="text" name="name" placeholder="氏名"></p>
 			<p class="err_name"></p>
-
 			<p>メール</p>
 			<p class="input"><input class="mail chk" type="email" name="mail" placeholder="メール"></p>
 			<p class="err_mail"></p>
 			<p>電話</p>
 			<p class="input"><input class="phone chk" type="telephone" name="phone" placeholder="電話"></p>
 			<p class="err_phone"></p>
-
 			<p>件名</p>
 			<p class="input"><input class="tag chk" type="text" name="tag" placeholder="件名"></p>
 			<p class="err_tag"></p>
-
 			<p>内容</p>
 			    <textarea class="contents chk" name="contents" placeholder="内容"></textarea>
 			    <p class="err_contents"></p>
-
 			<p class="input"><input type="submit" value="送信" name="submit"></p>
-
 		</form>
 	</div>
-
-
     <!-- toTop -->
 	<p class="toTop">
 		<a href="#Top">
 			<i class="material-icons">home</i>
 		</a>
 	</p>
-
-
     <!-- footer -->
     <footer class="cf">
     	<nav class="footer">
@@ -196,19 +159,11 @@ vue:SPA(single page action)youtubeの流しながらトップページに戻れ�
 				</a>
 			</ul>
     	</nav>
-
     	<p id="copyright">
     		<small>
     		&#169; Masatoshi Yui All rights reserved.
     	    </small>
     	</p>
     </footer>
-
 </body>
-
-
-
-
-
-
 </html>
