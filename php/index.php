@@ -30,7 +30,7 @@ $url = $_SERVER["REQUEST_URI"];
 */
 //----------------------------------------------------------------------------------------------------------------------------------------------
 //GLOBAL 変数用設定
-$top_page = 'https://office-kagent.com';																			//トップページURL（送信完了後リンク先）
+$top_page = 'https://office-kagent.com/portfolios/MY/';																			//トップページURL（送信完了後リンク先）
 $title_arr = ['name'=>'氏名','mail'=>'メールアドレス','phone'=>'電話番号','tag'=>'件名','contents'=>'お問い合わせ内容'];	//項目・項目名セット
 $req_items = ['name'=>'req','mail'=>'req','phone'=>'req','tag'=>'req','contents'=>'req'];							//必須項目設定（reqは必須、''は任意
 $err_message = resetItems($req_items);																				//エラーメッセージ用（！編集非推奨！）
@@ -42,7 +42,7 @@ $to_mail = 'msts0716@outlook.jp';										//送信先（管理者宛）メー�
 $err_mail = $to_mail;														//エラーログ・不正パラメータ送信用メールアドレス（デフォルトでは送信先メールアドレスと同じ
 $subject = "ホームページからのお問い合わせ";										//件名（管理者受信メール）
 //リファラチェック用
-$referUrl = 'excitingworks.jp';
+$referUrl = 'https://office-kagent.com';
 $referCheck = 1;
 //----------------------------------------------------------------------------------------------------------------------------------------------
 /*
@@ -57,24 +57,24 @@ if(isset($post['submit'])){
 		if(!$comm ->referChk($referUrl)) { initHtml($comm,$post); exit; };
 	}
 
-	if(isset($post['back'])) { header('Location:https://office-kagent.com'); exit; }
+	if(isset($post['back'])) { header('Location:'.$top_page); exit; }
 	if(isset($post['send']) && !empty($post['token'] && isset($post['token']))){
 		if(validate($comm)) {
 			finishHtml($comm); //完了画面
 		} else {
 			$GLOBALS['errmsg'] = '送信項目に不正値が検出されました。ご確認ください。';
 			errorSendMail($comm, $GLOBALS['errmsg']);
-			header('Location:https://office-kagent.com');
+			header('Location:'.$top_page);
 		}
 		exit();  // 処理終了  
 	}else{
-		(validate($comm)) ? verifyHtml($comm) : header('Location:https://office-kagent.com');
+		(validate($comm)) ? verifyHtml($comm) : header('Location:'.$top_page);
 		exit();
 	}
 }else{
 	//errorHtml(); //initHtml($comm)を入力画面として利用しない場合使用
 	//initHtml($comm);
-	header('Location:https://office-kagent.com');
+	header('Location:'.$top_page);
 	exit();
 }
 //+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
@@ -181,7 +181,7 @@ commmonHead();
 		<p class="alert"><?php echo $comm -> h($errmsg); ?></p>
 		<form action="<?php echo $url ?>" method="post" autocomplete="off">
 			<div class="name_div">氏名<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['name']; ?></span></div>
-			<div><input type="text" name="name" id="name" placeholder="(必須) 株式会社ＫＡｇｅｎｔ" maxlength="30" value="<?php if(isset($post['name'])) echo $comm -> h($post['name']); ?>" required></div>
+			<div><input type="text" name="name" id="name" placeholder="(必須) サンプル太郎" maxlength="30" value="<?php if(isset($post['name'])) echo $comm -> h($post['name']); ?>" required></div>
 			<div class="mail_div">メールアドレス<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['mail']; ?></span></div>
 			<div><input type="mail" name="mail" id="mail" placeholder="(必須) sample@mail.com" maxlength="255" value="<?php if(isset($post['mail'])) echo $comm -> h($post['mail']); ?>" required></div>
 			<div class="tel_div">電話<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['tel']; ?></span></div>
