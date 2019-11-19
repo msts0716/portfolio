@@ -3,7 +3,6 @@ $(function(){
 		var name = $(this).attr('name');
 				//直線にクリックした「これ」という形で指定が可能
 			if($(this).val()==''){
-						console.log(message)
 					$('.err_'+name).html('入力してください');//NULLチェック
 			}else{
 				var result = null;
