@@ -10,6 +10,7 @@ $(function(){
 	var outContent = [];	//本文
 	var outTitle = [];		//タイトル
 	var outImageUrl = [];	//画像
+	var outUrl = [];	
 	$.getJSON('http://localhost/wordpress/wp-json/wp/v2/posts',{
 	 	format:"json"
 	 })
@@ -38,6 +39,9 @@ $(function(){
 		outTitle.push(title);
 		outContent.push(content);
 		outImageUrl.push(imageData);
+		//URLデータ取得
+		var Url = data[num].guid.rendered;
+		outUrl.push(Url);
 	}
 	function CountStr(str){
 	    var cutFigure = '30'; // カットする文字数
@@ -54,9 +58,9 @@ $(function(){
 				colCount++;
 				$('.blogList').append('<div class="blogSec'+ colCount +'"></div>');
 			}
-			$('.blogSec'+colCount).append('<section class="three-co blog'+ count +'"><li></li><p class="BlogText"></p><div class="more_div"><a clss="more">more</a></div></section>');
+			$('.blogSec'+colCount).append('<section class="three-co blog'+ count +'"><li></li><p class="BlogText"></p><div class="more_div"><a href='+ outUrl[count] +'class="more">more</a></div></section>');
 			$('section.blog'+ count +' li').append(outImageUrl[count]);
-			$('section.blog'+ count +' li').append('<h3>'+outTitle[count]+'</h3>');
+			$('section.blog'+ count +' li').append('<div class="BlogTitle"><h3>'+outTitle[count]+'</h3></div>');
 			$('section.blog'+ count +' p.BlogText').html(outContent[count]);
 			count++;
 		}
