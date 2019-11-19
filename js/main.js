@@ -10,7 +10,7 @@ $(function(){
 	var outContent = [];	//本文
 	var outTitle = [];		//タイトル
 	var outImageUrl = [];	//画像
-	$.getJSON('https://office-kagent.com/portfolios/MY/wordpress/wp-json/wp/v2/posts',{
+	$.getJSON('http://localhost/wordpress/wp-json/wp/v2/posts',{
 	 	format:"json"
 	 })
     .done(function(data){
@@ -23,7 +23,7 @@ $(function(){
     })
 	function AdjustData(data, num){
 		var content = data[num].content.rendered;
-		var noImg = '<img src =./img/noimg.png>';//画像がない時の代替画像
+		var noImg = '<img src =./img/noimg.jpg>';//画像がない時の代替画像
 		//画像データ取得
 		//画像の有無判定
         var imgurl = content.match(/<figure class="wp-block-image">(.*)<\/figure>/);

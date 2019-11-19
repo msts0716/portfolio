@@ -30,7 +30,7 @@ $url = $_SERVER["REQUEST_URI"];
 */
 //----------------------------------------------------------------------------------------------------------------------------------------------
 //GLOBAL 変数用設定
-$top_page = 'https://office-kagent.com/portfolios/MY/';																			//トップページURL（送信完了後リンク先）
+$top_page = 'https://office-kagent.com';																			//トップページURL（送信完了後リンク先）
 $title_arr = ['name'=>'氏名','mail'=>'メールアドレス','phone'=>'電話番号','tag'=>'件名','contents'=>'お問い合わせ内容'];	//項目・項目名セット
 $req_items = ['name'=>'req','mail'=>'req','phone'=>'req','tag'=>'req','contents'=>'req'];							//必須項目設定（reqは必須、''は任意
 $err_message = resetItems($req_items);																				//エラーメッセージ用（！編集非推奨！）
@@ -42,7 +42,7 @@ $to_mail = 'msts0716@outlook.jp';										//送信先（管理者宛）メー�
 $err_mail = $to_mail;														//エラーログ・不正パラメータ送信用メールアドレス（デフォルトでは送信先メールアドレスと同じ
 $subject = "ホームページからのお問い合わせ";										//件名（管理者受信メール）
 //リファラチェック用
-$referUrl = 'office-kagent.com';
+$referUrl = 'excitingworks.jp';
 $referCheck = 1;
 //----------------------------------------------------------------------------------------------------------------------------------------------
 /*
@@ -57,18 +57,18 @@ if(isset($post['submit'])){
 		if(!$comm ->referChk($referUrl)) { initHtml($comm,$post); exit; };
 	}
 
-	if(isset($post['back'])) { header('Location:'. $top_page); exit; }
+	if(isset($post['back'])) { header('Location:https://office-kagent.com'); exit; }
 	if(isset($post['send']) && !empty($post['token'] && isset($post['token']))){
 		if(validate($comm)) {
 			finishHtml($comm); //完了画面
 		} else {
 			$GLOBALS['errmsg'] = '送信項目に不正値が検出されました。ご確認ください。';
 			errorSendMail($comm, $GLOBALS['errmsg']);
-			header('Location:' . $top_page);
+			header('Location:https://office-kagent.com');
 		}
 		exit();  // 処理終了  
 	}else{
-		(validate($comm)) ? verifyHtml($comm) : header('Location:' .  $top_page);
+		(validate($comm)) ? verifyHtml($comm) : header('Location:https://office-kagent.com');
 		exit();
 	}
 }else{
