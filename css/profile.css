@@ -286,7 +286,7 @@ footer{
 		padding:0;
 		margin:0;
 		display: table-cell;
-		width: 50%;
+		width: 48%;
 		text-align: center;
 	}
 	li{
@@ -294,7 +294,7 @@ footer{
 		width:100%;
 	}
 	ul a:last-child{
-		width:100%;
+		width:97.5%;
 		text-align: center;
 	}
 	/*mainVisual*/
