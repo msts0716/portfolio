@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vue CountUp Timer</title>
+	<!-- CSS -->
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		button{
+			width: 200px;
+			height: 200px;
+			font-size: 30px;
+			line-height: 30px;
+			border-radius: 50%;
+		}
+		.dsp span{
+			font-size: 35px;
+		}
+		#app{
+			width: 500px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.btn{
+			display: flex;
+			flex-direction: row;
+			margin: 0 auto;
+			justify-content: space-between;
+		}
+		#lap{
+			font-size: 20px;
+		}
+		#lap span{
+			font-size:16px;
+			margin-right: 10px;
+			color: #777777;
+		}
+	</style>
+</head>
+<body>
+	<!-- Vue Count Up Timer  -->
+	<div id="app">
+		<!-- 表示部 -->
+		<div class="dsp">
+			<span class="minute">{{minute}}</span>
+			<span>:</span>
+			<span class="second">{{second}}</span>
+			<span>.</span>
+			<span class="decimal">{{decimal}}</span>
+		</div>
+		<!-- ボタン部 -->
+		<div class="btn">
+			<button v-on:click="start" v-if="!timer">Start</button>
+			<button v-on:click="stop" v-if="timer">Stop</button>
+			
+			<button v-on:click="reset" v-if="!timer">Reset</button>
+			<button v-on:click="lap" v-if="timer">Lap</button>
+		</div>
+		<!-- ラップ部 -->
+		<p class="lap">ラップデータ（最大５件まで表示）<span>※以降更新</span></p>
+		<div id="lap" v-for="(item, i) in lapData">
+			<p><span>{{i+1}}</span>{{item}}</p>
+		</div>
+	</div>
+
+<!--　Vue.js 導入部 -->
+<script src="https://unpkg.com/es6-promise"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/http-vue-loader"></script>
+<!-- Vue.js 編集部分 -->
+<script type="text/javascript">
+	var app = new Vue({
+		el : '#app',
+		data : {
+			minute:0,
+			second:0,
+			decimal:0,
+			timer:false,
+			timerObj:null,
+			lapData:[],
+		},
+		methods : {
+			countUp:function(){
+				let self = this;
+				self.decimal++;
+				if(self.decimal>99) self.dispHundred();
+				if(self.second>59) self.dispSixty();
+			},
+			start(){
+				let self = this;
+				this.timerObj = setInterval( function(){ self.countUp() }, 10);	//0.01秒ごとにカウントアップを行う
+				this.timer = true;
+			},
+			stop(){
+				clearInterval(this.timerObj);									//setIntervalをリセット
+				this.timer = false;
+			},
+			dispHundred(){
+				this.decimal = 0;
+				this.second++;
+			},
+			dispSixty(){
+				this.second = 0;
+				this.minute++;
+			},
+			reset(){
+				this.decimal = 0;
+				this.second = 0;
+				this.minute = 0;
+				this.lapData = [];
+			},
+			lap(){
+				if(this.lapData.length>=5){
+					this.lapData.shift();
+				}
+				this.lapData.push(this.minute + ':' + this.second + '.' + this.decimal);
+			}
+		},
+		mounted(){
+			if(String(this.decimal).length<2) this.decimal = '0' + String(this.decimal);
+			if(String(this.second).length<2) this.second = '0' + String(this.second);
+		},
+		updated(){
+			if(String(this.decimal).length<2) this.decimal = '0' + String(this.decimal);
+			if(String(this.second).length<2) this.second = '0' + String(this.second);
+		}
+	})
+</script>
+<!-- /Vue.js 編集部分 -->
+</body>
+</html>
