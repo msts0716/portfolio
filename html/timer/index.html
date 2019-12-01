@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vue CountUp Timer</title>
+	<link rel="stylesheet" type="text/css" href="./css/timer.css">
+</head>
+<body>
+	<h1>タイマー</h1>
+	
+	<div id="app">
+		<div v-if="disp" class="Setting">
+			<span>
+			<select type="number" name="hour" v-model="hour">
+				<option v-for="n in 24" v-bind:value="n-1">{{n-1}}</option>
+			</select>
+			<span class="Unit">時間</span>
+			</span>
+			<span>
+				<select type="number" name="minute" v-model="minute">
+					<option v-for="n in 60" v-bind:value="n-1">{{n-1}}</option>
+				</select>
+				<span class="Unit">分</span>
+			</span>
+			<span>
+				<select type="number" name="second" v-model="second">
+					<option v-for="n in 60" v-bind:value="n-1">{{n-1}}</option>
+				</select>
+				<span class="Unit">秒</span>
+			</span>
+		</div>		
+	
+
+		<div v-if="!disp" class="Active">
+			<p>
+				<span class="Unit2">{{hour}}</span>
+				<span class="Unit2">：</span>
+				<span class="Unit2">{{minute}}</span>
+				<span class="Unit2">：</span>
+				<span class="Unit2">{{second}}</span>
+			</p>
+		</div>
+
+		<div>
+			<input type="button" class="Start" value="スタート" v-on:click="start()" v-if="disp" >
+			<input type="button" class="Stop" value="ストップ" v-on:click="stop()" v-if="!disp" >
+		</div>
+
+	</div>
+
+	
+
+	<script type="text/javascript" src="https://unpkg.com/es6-promise"></script>
+	<script type="text/javascript" src="https://unpkg.com/vue"></script>
+	<script type="text/javascript" src="https://unpkg.com/http-vue-loader"></script>
+
+
+	<script type="text/javascript">
+		var app = new Vue({
+			el:'#app',
+			data:{
+				hour:0,
+				minute:0,
+				second:0,
+				disp:true,
+				obj:null,
+			},
+			methods:{
+				start(){
+					this.disp = false;
+
+					let self = this;
+					this.obj = setInterval(function(){self.countDown()},1000);
+				},
+				stop(){
+					this.disp = true;
+					clearInterval(this.obj);
+				},
+				countDown(){
+					if (this.second==0) {
+						if(this.hour==0 && this.minute==0) {
+							this.stop();
+							alert('完了！');
+							return;
+						}else if(this.minute>0){
+							this.minute--;
+							this.second=59;
+						}else if(this.hour>0){
+							this.hour--;
+							this.minute=59;
+							this.second=59;
+						}	
+					}else{
+						this.second--;
+					}
+				},
+			},
+
+			updated(){
+				if (!this.disp) {
+					if (String(this.hour).length<2) this.hour = '0'+String(this.hour);
+					if (String(this.minute).length<2) this.minute = '0'+String(this.minute);
+					if (String(this.second).length<2) this.second = '0'+String(this.second);
+				}else{
+					this.hour = Number(this.hour);
+					this.minute = Number(this.minute);
+					this.second = Number(this.second);
+				}
+			}
+		})
+	</script>
+</body>
+</html>

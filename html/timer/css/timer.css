@@ -1,0 +1,50 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	text-align: center;
+	font-size: 16px;
+	color: #555555;
+	font-family: "Sawarabi Mincho", 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
+	font-weight: bold;
+	width: 100%;
+}
+
+/*設定画面*/
+p{
+	font-size: 50px;
+}
+span{
+	font-size: 30px;
+}
+select{
+	font-size: 70px;
+	padding-left: 45px;
+}
+.Unit{
+	font-size: 30px;
+}
+.Setting{
+	margin: 50px 0 29px;
+}
+
+
+/*起動中*/
+.Unit2{
+	font-size: 80px;
+	padding:15px;
+}
+.Active{
+	margin-top: 30px;
+}
+
+
+input{
+	font-size: 30px;
+	padding: 50px;
+	margin: 50px 100px;
+	border-radius: 100px;
+}
+input:hover{background: #7fffd4;}
+input:active{color: #32cd32;}
