@@ -1,0 +1,32 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	text-align: center;
+	font-size: 16px;
+	font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
+	font-weight: bold;
+	width: 100%;
+}
+
+.contents{
+	padding-top: 30px;
+	overflow: hidden;
+	height: 35px;
+}
+
+#tab{
+	transform: translateY(0px);
+}
+
+p{
+	font-size:30px;
+}
+
+input{
+	font-size: 30px;
+    padding: 50px;
+    margin: 50px 100px;
+    border-radius: 100px;
+}
