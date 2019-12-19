@@ -36,22 +36,25 @@ input:active{color: #32cd32;}
 	h1{
 		width:100%;
 		font-size:200%;
+		margin-top: 20px;
 	}
 	p{
 		font-size:500%;
 	}
 	section>div{
 		width: 100%;
-		display: flex;
 		justify-content: space-around;
 		margin: 0;
 	}
 	input{
-		width: 100px;
+		width: 200px;
 		height: 100px;
 		padding: 0;
 		margin: 0;
 		font-size: 20px;
+		display: flow-root;
+		margin-left:100px;
+		margin-top: 20px;
 	}
 	.RapList{
 		flex-direction: column;

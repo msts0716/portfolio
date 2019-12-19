@@ -245,7 +245,10 @@ footer{
 }
 /*--------------------------------------------------------*/
 @media screen and (max-width: 800px){
-	header,footer,#main,img.ph,.three-co,div,li,a,img{
+	*{
+		margin: 0 auto;
+	}
+	img.ph{
 		width: 100%;
 	}
 	nav,ul,li,section,div,.three-co{
