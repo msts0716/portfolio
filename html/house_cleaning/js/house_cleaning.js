@@ -1,12 +1,4 @@
 $(function(){
-	$('a[href^="#"]').on('click',function(){
-	    var speed = 500;
-	    var href= $(this).attr("href");
-	    var target = $(href == "#" || href == "" ? 'html' : href);
-	    var position = target.offset().top;
-	    $("html, body").animate({scrollTop:position}, speed, "swing");
-	    return false;
-  	});
 	var outContent = [];
 	var outTitle = [];
 	var outImageUrl = [];
@@ -71,9 +63,6 @@ $(function(){
 				if(name=='phone'){
 					result = $(this).val().match(/^\d{10,11}$/);
 					message =　'電話番号の形式が異なります';
-				}else if(name=='mail'){
-					result = $(this).val().match(/^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9]{1,}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9_.-]{1,}$/);
-					message =　'メールアドレスの形式が異なります';
 				}else{
 					result = $(this).val().match(/[^!"#$%&'()\*\+\-\.,\/:;<=>?@\[\\\]^_`{|}~]+/);
 					message = '不正な記号が含まれています';
