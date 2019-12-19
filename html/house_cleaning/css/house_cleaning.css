@@ -51,9 +51,6 @@ ul,li{
 	content:"";
 	list-style: none;
 }
-ul a:last-child li{
-	padding-left: 0;
-}
 /*skill*/
 .ttl{
 	margin: 0 0 10px;
